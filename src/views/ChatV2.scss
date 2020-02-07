@@ -1,0 +1,86 @@
+html, body {
+    background-color: #2e2e2e;
+}
+.chat-container {
+    max-width: 500px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 1rem auto;
+    height: calc(100vh - 2rem);
+    position: relative;
+    overflow: hidden;
+
+    .message {
+        padding: 1rem 1rem 4rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+
+        &__item {
+            max-width: max-content;
+
+            .message__item-content {
+                padding: 8px;
+                border-radius: 8px;
+            }
+
+            .message__item-author {
+                font-size: 12px;
+            }
+            
+            &--sender {
+                align-self: flex-end;
+                .message__item-content {
+                    background-color: tomato;
+                    color: #fff;
+                }
+                .message__item-author {
+                    text-align: right;
+                }
+            }
+
+            &--receiver {
+                align-self: flex-start;
+
+                .message__item-content {
+                    background-color: #555555;
+                    color: #fff;
+                }
+                .message__item-author {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .input-wrapper {
+        width: 100%;
+        padding: 8px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #eaeaea;
+
+        input {
+            width: 80%;
+            border: 0;
+            padding: 8px;
+            outline: none;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        button {
+            width: 20%;
+            padding: 8px 4px;
+            border: 0;
+            background-color: #0998b1;
+            color: #fff;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}
